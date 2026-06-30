@@ -1,0 +1,349 @@
+@font-face {
+    font-family: 'Benzin Family';
+    src: local('Benzin Family Bold'), local('Benzin-Family-Bold'),
+    url('../assets/fonts/Benzin-Bold.woff2') format('woff2'),
+    url('../assets/fonts/Benzin-Bold.woff') format('woff'),
+    url('../assets/fonts/Benzin-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-display: swap;
+}
+
+html {
+    font-size: 20px;
+    background: #181818;
+    scroll-behavior: smooth;
+    font-synthesis: none;
+}
+body {
+    transition: opacity 0.3s ease;
+}
+body.loading {
+    pointer-events: none;
+    overflow: hidden;
+}
+html.fonts-loading body { visibility: hidden; }
+
+html.fonts-ready body { visibility: visible; }
+html main {
+    overflow: hidden;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    line-height: 120%;
+    text-decoration: none;
+    border: none;
+    font-family: Inter, sans-serif;
+}
+main {
+    padding: 0 3rem 4rem 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-image: url("../assets/images/noise-bg.png"), url("../../../join/images/checkmark-1.png"), url("../../../join/images/checkmark-2.png"), url("../../../join/images/checkmark-3.png"), url("../../../join/images/graffity-img.png"), url("../../../join/images/bg.png");
+    background-repeat: no-repeat;
+    background-position: center, 50% 5%, 90% 0, 0 5%, center right, center;
+    background-size: 100% 100%, 10vw auto, 8vw auto, 6vw auto, 50% auto, 100% 100%;
+    min-height: 100vh;
+    justify-content: center;
+}
+main > .content {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    position: relative;
+}
+main > .content .left::before {
+    content: "";
+    position: absolute;
+    right: 9%;
+    bottom: -6rem;
+    width: 3rem;
+    height: 8rem;
+    background-image: url(../lmbutton/arrow.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+main > .content > div {
+
+}
+main > .content > .left {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+    margin-bottom: 2rem;
+}
+.form-card__cta,
+a {
+    border:0;
+    cursor:pointer;
+    width:100%;
+    padding:1rem 1rem;
+    display: flex;
+    justify-content: center;
+    border-radius: 16px;
+    background: #FFE500;
+    box-shadow: 0 21px 22.5px 0 rgba(255, 255, 255, 0.53) inset;
+    color:#111;
+    font-size: 1rem;
+    position:relative;
+    font-family: 'Benzin Family', sans-serif;
+    font-weight: 700;
+    line-height: 118%;
+    text-transform: uppercase;
+    align-items: center;
+    gap: 1rem;
+}
+a {
+    width: fit-content;
+    margin: 2rem auto;
+}
+main > .content > .left .title {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-family: 'Benzin Family', sans-serif;
+    padding-top: 10rem;
+}
+main > .content > .left .title span {
+    color: #FFE500;
+    font-family: 'Benzin Family', sans-serif;
+}
+main > .content > .left .tooltip,
+main > .bottom .tooltip {
+    font-size: 1.25rem;
+    color: #B1B1B1;
+    text-align: center;
+}
+main .content > .right img {
+    height: 70vh;
+    width: auto;
+    transform: rotate(0deg);
+}
+a {
+    border:0;
+    cursor:pointer;
+    padding:1rem 3rem;
+    display: flex;
+    justify-content: center;
+    border-radius: 16px;
+    background: #FFE500;
+    box-shadow: 0 21px 22.5px 0 rgba(255, 255, 255, 0.53) inset;
+    color:#111;
+    font-size: 1.5rem;
+    position:relative;
+    font-family: 'Benzin Family', sans-serif;
+    font-weight: 800;
+    line-height: 118%;
+    text-transform: uppercase;
+    width: fit-content;
+    align-items: center;
+    gap: 1rem;
+}
+a img {
+    width: auto;
+    height: 2.5rem;
+}
+main > .bottom .tooltip {
+    text-align: center;
+    font-size: 1.35rem;
+    margin-bottom: 1rem;
+}
+main > .bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    justify-content: center;
+}
+main > .bottom .after {
+    display: flex;
+    border-radius: 16px;
+    border: 1px solid #575757;
+    background-color: rgba(175, 175, 175, 0.08);
+    backdrop-filter: blur(45px);
+    padding: 1rem 1rem 1rem 7rem;
+    width: fit-content;
+    background-image: url("../../../join/images/phone-icon.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: auto 100%;
+}
+main > .bottom .after img {
+    height: 50%;
+    width: auto;
+}
+main > .bottom .after .title {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+main > .bottom .after > div {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+main > .bottom .after .text {
+    font-size: 1.15rem;
+    color: #B1B1B1;
+}
+main > .bottom .after .text span {
+    font-weight: 600;
+    font-size: 1.15rem;
+}
+img.mobile {
+    display: none;
+}
+@media only screen and (max-width: 1640px) {
+    html {
+        font-size: 18px;
+    }
+}
+@media only screen and (max-width: 1240px) {
+    html {
+        font-size: 16px;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    html {
+        font-size: 14px;
+    }
+    main {
+        justify-content: center;
+        background-size: 100% 100%, 20vw auto, 15vw auto, 12vw auto, 80% auto, 100% 100%;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    main > .content {
+        gap: 1rem;
+    }
+    main > .content > .left .title {
+        font-size: 2.35rem;
+    }
+    main .content > .right img {
+        height: 50vh;
+    }
+}
+@media only screen and (max-width: 830px) {
+    html {
+        font-size: 16px;
+    }
+    main {
+        background-position: center, 90% 25%, 100% 0, 0 5%, center right, center;
+        background-size: 100% 100%, 20vw auto, 15vw auto, 12vw auto, 80% auto, 100% 100%;
+    }
+    main > .content {
+        flex-direction: column;
+        align-items: center;
+    }
+    main > .content > .left {
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+    main > .content > .left .title {
+        padding-top: 1rem;
+        font-size: 2.25rem;
+    }
+    main > .content > .left .title br {
+        display: none;
+    }
+    main > .content > .left .tooltip {
+        position: relative;
+        z-index: 5;
+    }
+    main .content > .right img {
+        width: 60%;
+        height: auto;
+        margin: -5rem auto -2rem auto;
+        display: block;
+        position: relative;
+        z-index: 2;
+
+    }
+    main > .content > .left .tooltip, main > .bottom .tooltip {
+        text-align: center;
+    }
+}
+@media only screen and (max-width: 600px) {
+    main {
+        padding: 4rem 1rem;
+        background-position: center, 50% 0, 100% 0, 0 5%, center right, center;
+        background-size: 100% 100%, 30vw auto, 18vw auto, 16vw auto, 100% auto, 100% 100%;
+    }
+    main .content > .right img {
+        margin-top: -4rem;
+        margin-bottom: -2rem;
+        width: 70%;
+    }
+    main > .content .right {
+        display: none;
+    }
+    img.mobile {
+        display: block;
+        width: 100%;
+        margin: -5rem 0 -1rem 0;
+    }
+    .button-wrapper {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: .5rem;
+    }
+    a {
+        padding: 1rem;
+        width: 100%;
+    }
+    main > .content > .left .title {
+        font-size: 2rem;
+    }
+}
+@media only screen and (max-width: 480px) {
+    main > .bottom {
+        gap: 1rem;
+    }
+    main > .bottom .after {
+        margin: 0 .5rem;
+    }
+    main > .bottom .after .title {
+        font-size: 1.05rem;
+    }
+    main > .bottom .after .text,
+    main > .bottom .after .text span {
+        font-size: .9rem;
+    }
+    main > .bottom .after .text br {
+        display: none;
+    }
+    a {
+        width: 100%;
+        font-size: 1.35rem;
+    }
+    main .content > .right img {
+        width: 80%;
+    }
+}
+@media only screen and (max-width: 420px) {
+    html {
+        font-size: 14px;
+    }
+    a {
+        padding: 1rem 2rem;
+    }
+    main > .content > .left .title {
+        font-size: 2.25rem;
+    }
+}
+@media only screen and (max-width: 390px) {
+    html {
+        font-size: 13px;
+    }
+}
+@media only screen and (max-width: 351px) {
+    html {
+        font-size: 12px;
+    }
+}
